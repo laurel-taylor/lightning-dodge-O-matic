@@ -2,12 +2,23 @@
 
 Avoid lightning strikes on Final Fantasy X by using an Arduino + LDR + Servo
 
-<blockquote class="twitter-video" data-lang="en"><p lang="en" dir="ltr">Lightning dancing like a machine. Presenting lightning-dodge-O-matic <a href="https://twitter.com/hashtag/FFX?src=hash">#FFX</a> <a href="https://twitter.com/hashtag/Lulu?src=hash">#Lulu</a> <a href="https://twitter.com/hashtag/Arduino?src=hash">#Arduino</a> <a href="https://t.co/WMLX1CRwSN">pic.twitter.com/WMLX1CRwSN</a></p>&mdash; Javi Rengel (@rephus) <a href="https://twitter.com/rephus/status/742057060456648709">June 12, 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Now with actual servo code! I still used the hardware shema below though, just on an Arduino UNO, not a pro, which is why there's more wires.
+
+```
+Parts list:
+
+Arduino/ELEGOO UNO R3
+mini breadboard
+5V servo
+LDR/photocell
+
+USB connector for arduino
+M to M wires x5
+M to F wires x2 (to lead sensor to TV)
+```
 
 ![](img.jpg)
-
-![](record.jpg)
 
 ## Hardware schema
 
@@ -17,10 +28,10 @@ Download [fritzing schema](https://github.com/rephus/lightning-dodge-O-matic/raw
 
 ```
 LDR + -> A0
-LDR - -> VCC
+LDR - -> 5V
 110Ohm + -> GND
 110Ohm - ->  A0
 Servo - -> GND
-Servo + -> VCC
+Servo + -> 5V
 Servo i -> D9
 ```
