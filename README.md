@@ -2,21 +2,28 @@
 
 Avoid lightning strikes on Final Fantasy X by using an Arduino + LDR + Servo
 
+Now with actual servo code! I still used the hardware shema below though, just on an ELEGOO UNO, not an Arduino pro, which is why there's more wires. I ain't fancy. 
 
-Now with actual servo code! I still used the hardware shema below though, just on an Arduino UNO, not a pro, which is why there's more wires.
+If you're completely new to Arduino, like me, I recommend getting this kit: [ELEGOO UNO Project Super Starter Kit with Tutorial and UNO R3 Compatible with Arduino IDE](https://smile.amazon.com/gp/product/B01D8KOZF4) It has everything you need and a lot more!
 
 ```
 Parts list:
 
-Arduino/ELEGOO UNO R3
-mini breadboard
-5V servo
-LDR/photocell
+1x Arduino/ELEGOO UNO R3
+1x mini (or large, whatever) breadboard
+1x 5V mini servo
+1x LDR/photocell
+1x 1kOhm resistor (or 100Ohm?, i dont care, 1k worked for me)
 
-USB connector for arduino
-M to M wires x5
-M to F wires x2 (to lead sensor to TV)
+1x USB connector for arduino
+5x M to M wires 
+2x M to F wires (to lead sensor to TV)
+
+masking/painters tape for photocell -> TV
+rubber bands for servo -> controller
 ```
+
+![](img0.jpg)
 
 ![](img.jpg)
 
@@ -29,8 +36,8 @@ Download [fritzing schema](https://github.com/rephus/lightning-dodge-O-matic/raw
 ```
 LDR + -> A0
 LDR - -> 5V
-110Ohm + -> GND
-110Ohm - ->  A0
+1kOhm + -> GND
+1kOhm - ->  A0
 Servo - -> GND
 Servo + -> 5V
 Servo i -> D9
